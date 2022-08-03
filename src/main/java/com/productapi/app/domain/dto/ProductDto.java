@@ -1,8 +1,6 @@
 package com.productapi.app.domain.dto;
 
 import com.productapi.app.domain.Product;
-import com.productapi.app.domain.ProductCategories;
-import com.productapi.app.domain.ProductTags;
 import com.productapi.app.domain.enums.ProductStatusEnum;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;

@@ -4,17 +4,13 @@ import com.productapi.app.domain.Product;
 import com.productapi.app.domain.ProductCategories;
 import com.productapi.app.domain.ProductTags;
 import com.productapi.app.domain.dto.FilterDto;
-import com.productapi.app.domain.dto.ProductCategoriesDto;
 import com.productapi.app.domain.dto.ProductDto;
 import com.productapi.app.domain.enums.ProductStatusEnum;
 import com.productapi.app.repository.ProductRepository;
-import com.productapi.app.util.ParserUtil;
 import com.productapi.app.util.ValidationUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

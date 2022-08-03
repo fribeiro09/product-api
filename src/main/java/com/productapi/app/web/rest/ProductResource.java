@@ -6,9 +6,6 @@ import com.productapi.app.domain.enums.ProductStatusEnum;
 import com.productapi.app.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -51,13 +48,13 @@ public class ProductResource {
     }
 
     @RequestMapping(value = "/{productId}", method = RequestMethod.DELETE, produces = {MediaType.APPLICATION_JSON_VALUE})
-    public ProductDto disableProductById(@PathVariable(value = "id") long productId) {
+    public ProductDto disableProductById(@PathVariable(value = "productId") Long productId) {
         ProductDto productDto = this.productService.changeProductStatusById(productId, ProductStatusEnum.DRAFT);
         return productDto;
     }
 
     @RequestMapping(value = "/{productId}/activate", method = RequestMethod.PUT, produces = {MediaType.APPLICATION_JSON_VALUE})
-    public ProductDto activateProductById(@PathVariable(value = "productId") long productId) {
+    public ProductDto activateProductById(@PathVariable(value = "productId") Long productId) {
         ProductDto productDto = this.productService.changeProductStatusById(productId, ProductStatusEnum.ACTIVE);
         return productDto;
     }
